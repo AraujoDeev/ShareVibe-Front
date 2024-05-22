@@ -115,6 +115,6 @@ export const Actions = styled.div`
 
   cursor: pointer;
   &:hover {
-    background-color: #f1f2f6;
+    background-color: red;
   }
 `
