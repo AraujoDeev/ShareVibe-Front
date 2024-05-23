@@ -1,7 +1,8 @@
 import { Box, Link, Typography } from '@mui/material'
-import { Actions, classes } from './post'
+import { Actions, ReactionsComments, classes } from './post'
 
 import Profile from '../../assets/Perfil.jpg'
+import Profile_2 from '../../assets/profile_2.jpg'
 import PhotoPost from '../../assets/post.jpg'
 
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
@@ -10,6 +11,7 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp'
 import { AiOutlineLike } from 'react-icons/ai'
 import { FaRegComment } from 'react-icons/fa'
 import { PiShareFatLight } from 'react-icons/pi'
+import { IoMdSend } from 'react-icons/io'
 
 const Post = () => {
   return (
@@ -92,8 +94,57 @@ const Post = () => {
       </Box>
 
       {/* coments */}
-      <Box>
-        <Typography>alisiadsjfkdbgfldnvkBv</Typography>
+      <Box sx={classes.CommentsContainer}>
+        <Box
+          sx={classes.TopContainer}
+          // className="container imagem, nome, comentario e reacao"
+        >
+          <Box className="imagem">
+            <img style={classes.ImageComments} src={Profile_2} alt="Profile" />
+          </Box>
+
+          <Box>
+            <Box sx={classes.Comments}>
+              <Typography fontWeight={'bold'} variant="subtitle1">
+                Jennifer Davis
+              </Typography>
+              <Typography variant="subtitle1">
+                I think James Smith is a classic American name. It’s amazing how
+                names like John Johnson and Mary Johnson have been popular for
+                generations. The diversity in American surnames, from Brown to
+                Miller to Wilson, really reflects the melting pot of cultures
+                that the United States represents.
+              </Typography>
+            </Box>
+            <ReactionsComments
+            // classNmae="reacao"
+            >
+              <Typography fontSize={'13px'} variant="subtitle1">
+                12 h
+              </Typography>
+              <Typography fontSize={'13px'} variant="subtitle1">
+                Like
+              </Typography>
+              <Typography fontSize={'13px'} variant="subtitle1">
+                Reply
+              </Typography>
+            </ReactionsComments>
+          </Box>
+        </Box>
+
+        <Box sx={classes.BoxComment}>
+          <img style={classes.ImageComments} src={Profile} alt="Profile" />
+          <Box sx={classes.BoxInputComment}>
+            <form style={classes.Form}>
+              <input
+                style={classes.InputComment}
+                type="text"
+                placeholder="Comment..."
+              />
+              <IoMdSend style={classes.IconSendMessage} />
+            </form>
+          </Box>
+        </Box>
       </Box>
     </Box>
   )

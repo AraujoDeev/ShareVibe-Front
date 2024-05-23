@@ -103,6 +103,54 @@ export const classes = {
     fontSize: '24px',
     marginRight: '10px',
   },
+  CommentsContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '20px 30px',
+  },
+  TopContainer: {
+    display: 'flex',
+  },
+  ImageComments: {
+    width: '35px',
+    height: '35px',
+    borderRadius: '50%',
+    marginRight: '8px',
+  },
+  Comments: {
+    backgroundColor: '#F0F2F5',
+    borderRadius: '12px',
+    marginLeft: '2px',
+    padding: '4px 18px',
+  },
+  BoxComment: {
+    marginTop: '20px',
+    display: 'flex',
+    justifyContent: 'start',
+    alignItems: 'center',
+  },
+  BoxInputComment: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+    padding: '5px 8px',
+    borderRadius: '40px',
+    backgroundColor: '#F0F2F5',
+  },
+  Form: {
+    width: '100%',
+    display: 'flex',
+  },
+  InputComment: {
+    border: 'none',
+    backgroundColor: 'transparent',
+    outline: 'none',
+    width: '100%',
+  },
+  IconSendMessage: {
+    fontSize: '24px',
+    cursor: 'pointer',
+  },
 }
 
 export const Actions = styled.div`
@@ -117,4 +165,12 @@ export const Actions = styled.div`
   &:hover {
     background-color: #f1f2f6;
   }
+`
+
+export const ReactionsComments = styled.div`
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  color: #999b9d;
 `
